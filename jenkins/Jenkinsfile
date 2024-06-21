@@ -18,7 +18,17 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh './deliver.sh'
+                 script {
+                    def deliverScript = "${WORKSPACE}/jenkins/deliver.sh"
+                    if (fileExists(deliverScript)) {
+                        // Ensure the script has execute permissions
+                        sh "chmod +x ${deliverScript}"
+                        // Execute the script
+                        sh deliverScript
+                    } else {
+                        error "Script not found: ${deliverScript}"
+                    }
+                }
             }
         }
     }
