@@ -24,7 +24,9 @@ pipeline {
             }
         }
         stage("Finish"){
-            sh "Pipeline Success!"
+            steps{
+                sh "Pipeline Success!"
+            }
         }
     }
 }
