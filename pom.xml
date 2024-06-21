@@ -2,6 +2,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.acronikhil.jenkins</groupId>
   <artifactId>java-jenkins</artifactId>
+  <configuration>
+      <encoding>UTF-8</encoding>
+  </configuration>
   <version>0.0.1-SNAPSHOT</version>
   <name>simple-java-maven-app</name>
   <description>learning jenkins</description>
