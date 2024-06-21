@@ -25,7 +25,7 @@ pipeline {
         }
         stage('Finish'){
             steps {
-                echo 'Pipeline Success!'
+                echo 'Pipeline Success with auto trigger!'
             }
         }
     }
